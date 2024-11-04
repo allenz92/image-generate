@@ -58,7 +58,7 @@ export function ImageGenerationForm() {
         params.append('negative_prompt', values.negative_prompt)
       }
 
-      const response = await fetch(`/generate_img?${params.toString()}`)
+      const response = await fetch(`/img?${params.toString()}`)
       
       if (!response.ok) {
         throw new Error('Failed to generate image')
